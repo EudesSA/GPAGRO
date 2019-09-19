@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">GPAGRO</string>
+    <string name="producao_total">Produção Total</string>
+    <string name="custo_total">Custo Total</string>
+    <string name="custo_x_producao">Custo x Produção</string>
+    <string name="lancamento_de_producao">Lançamento de Produção</string>
+    <string name="lancamento_de_custo">Lançamento de Custo</string>
+    <string name="nome_APP_Tela_Principal">Gestão de Custo Rural</string>
+    <string name="NomeFazenda_Mes_Lancamento">Lançamentos de custo mês de   agosto / 2019   Fazenda Morro Alto - SFB</string>
+    <string name="Texto_button_limpar">Limpar Tela</string>
+    <string name="Texto_button_salvar">Salvar</string>
+    <string name="data_lancamento">Data Lançamento</string>
+    <string name="numero_da_nota">Número da nota</string>
+</resources>
