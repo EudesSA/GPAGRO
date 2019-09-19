@@ -49,7 +49,7 @@
         android:layout_below="@id/textNomeFazendaMES"/>
 
     <TextView
-        android:id="@+id/textDataLancamento"
+        android:id="@+id/textData_Lancamento"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -59,10 +59,10 @@
         android:layout_below="@id/viewLinha2"/>
 
     <EditText
-        android:id="@+id/editDataLancamento"
+        android:id="@+id/editData_Lancamento"
         android:layout_width="150dp"
         android:layout_height="35dp"
-        android:layout_below="@+id/textDataLancamento"
+        android:layout_below="@+id/textData_Lancamento"
         android:ems="10"
         android:textSize="16dp"
         android:gravity="center"
@@ -70,6 +70,16 @@
         android:inputType="date"
         android:hint="DD/MM/AAAA"
         android:background="@drawable/edit_text"/>
+
+    <DatePicker
+        android:id="@+id/DP_data_Lancamento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:datePickerMode="spinner"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:calendarViewShown = "false"
+        android:visibility="invisible"/>
 
     <TextView
         android:id="@+id/textValor"
@@ -101,7 +111,7 @@
         android:text="@string/numero_da_nota"
         android:layout_alignParentLeft="true"
         android:textSize="18sp"
-        android:layout_below="@id/editDataLancamento"/>
+        android:layout_below="@id/editData_Lancamento"/>
 
     <EditText
         android:id="@+id/editNumberoNota"
@@ -242,12 +252,6 @@
         android:layout_below="@id/textData_Validade"
         android:calendarViewShown = "false"
         android:visibility="invisible"/>
-
-
-
-
-
-
 
     <Button
         android:id="@+id/bt_Limpar_Lancamento_Custo"
