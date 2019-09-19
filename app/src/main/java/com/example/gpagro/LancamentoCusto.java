@@ -16,17 +16,17 @@ import java.util.Calendar;
 public class LancamentoCusto extends AppCompatActivity implements View.OnClickListener {
     private ViewHolder mViewHolder = new ViewHolder();
 
-    DatePicker dpdata_Validade;
-    DatePicker dpdata_Pagamento;
-    DatePicker dpdata_Lancamento;
-    EditText editData_Validade;
-    EditText editData_Pagamento;
-    EditText editData_Lancamento;
+    private DatePicker dpdata_Validade, dpdata_Pagamento, dpdata_Lancamento;
+    private EditText editData_Validade, editData_Pagamento, editData_Lancamento, edit_valor;
+    private Button button_limpar, button_salvar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lancamento_custo);
+
+        edit_valor = findViewById(R.id.editValor);
+        edit_valor.requestFocus();
 
         Spinner dropdown = findViewById(R.id.list_itemTipoProducao);
 
@@ -45,10 +45,9 @@ public class LancamentoCusto extends AppCompatActivity implements View.OnClickLi
         this.mViewHolder.buttonLimpar = findViewById(R.id.bt_Limpar_Lancamento_Custo);
         this.mViewHolder.buttonLimpar.setOnClickListener(this);
 
-
         editData_Validade = findViewById(R.id.editData_Validade);
         editData_Pagamento = findViewById(R.id.editData_Pagamento);
-        editData_Lancamento = findViewById(R.id.editData_Pagamento);
+        editData_Lancamento = findViewById(R.id.editData_Lancamento);
         dpdata_Validade = findViewById(R.id.DP_data_Validade);
         dpdata_Pagamento = findViewById(R.id.DP_data_Pagamento);
         dpdata_Lancamento = findViewById(R.id.DP_data_Lancamento);
@@ -92,7 +91,8 @@ public class LancamentoCusto extends AppCompatActivity implements View.OnClickLi
                 }
 
             }
-        });editData_Lancamento.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+        });
+        editData_Lancamento.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
             public void onFocusChange(View view, boolean hasFocus) {
                 if (hasFocus) {

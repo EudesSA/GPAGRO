@@ -68,16 +68,17 @@
         android:gravity="center"
         android:padding="4dp"
         android:inputType="date"
-        android:hint="DD/MM/AAAA"
         android:background="@drawable/edit_text"/>
 
     <DatePicker
         android:id="@+id/DP_data_Lancamento"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@color/aquamarine"
         android:datePickerMode="spinner"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
+        android:layout_below="@+id/editData_Pagamento"
         android:calendarViewShown = "false"
         android:visibility="invisible"/>
 
@@ -144,7 +145,7 @@
         android:gravity="center"
         android:hint="AGROTEC - Produtos Agropecuários"
         android:padding="4dp"
-        android:inputType="number"
+        android:inputType="text"
         android:background="@drawable/edit_text"/>
 
     <TextView
@@ -184,7 +185,7 @@
         android:gravity="center"
         android:hint="Ração mineral suplementada"
         android:padding="4dp"
-        android:inputType="number"
+        android:inputType="text"
         android:background="@drawable/edit_text"/>
 
     <TextView
@@ -235,10 +236,11 @@
         android:id="@+id/DP_data_Validade"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@color/aquamarine"
         android:datePickerMode="spinner"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:layout_below="@id/textData_Validade"
+        android:layout_below="@+id/editData_Pagamento"
         android:calendarViewShown = "false"
         android:visibility="invisible"/>
     
@@ -246,16 +248,17 @@
         android:id="@+id/DP_data_Pagamento"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@color/aquamarine"
         android:datePickerMode="spinner"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:layout_below="@id/textData_Validade"
+        android:layout_below="@+id/editData_Pagamento"
         android:calendarViewShown = "false"
         android:visibility="invisible"/>
 
     <Button
         android:id="@+id/bt_Limpar_Lancamento_Custo"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="5dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="casual"
@@ -268,7 +271,7 @@
 
     <Button
         android:id="@+id/bt_Salvar_Lancamento_Custo"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="5dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="casual"
