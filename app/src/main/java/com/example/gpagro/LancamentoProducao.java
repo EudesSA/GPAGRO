@@ -30,7 +30,7 @@ public class LancamentoProducao extends AppCompatActivity implements View.OnClic
         Spinner dropdown = findViewById(R.id.list_itemTipoProducao);
 
         String[] items = new String[]{
-                " ","Pecuária - leite","Pecuária - gado de corte", "Plantação de hortaliças",
+                " ", "Pecuária - leite", "Pecuária - gado de corte", "Plantação de hortaliças",
                 "Suinocultura", "Piscicultura", "Caprinocultura"
         };
 
@@ -52,9 +52,9 @@ public class LancamentoProducao extends AppCompatActivity implements View.OnClic
         dpdata_Pagamento = findViewById(R.id.DP_data_Pagamento);
         dpdata_Lancamento = findViewById(R.id.DP_data_Lancamento);
 
-        editData_Validade.setText(dpdata_Validade.getDayOfMonth()+"/"+ (dpdata_Validade.getMonth() + 1)+"/"+ dpdata_Validade.getYear());
-        editData_Pagamento.setText(dpdata_Pagamento.getDayOfMonth()+"/"+ (dpdata_Pagamento.getMonth() + 1)+"/"+ dpdata_Pagamento.getYear());
-        editData_Lancamento.setText(dpdata_Lancamento.getDayOfMonth()+"/"+ (dpdata_Lancamento.getMonth() + 1)+"/"+ dpdata_Lancamento.getYear());
+        editData_Validade.setText(dpdata_Validade.getDayOfMonth() + "/" + (dpdata_Validade.getMonth() + 1) + "/" + dpdata_Validade.getYear());
+        editData_Pagamento.setText(dpdata_Pagamento.getDayOfMonth() + "/" + (dpdata_Pagamento.getMonth() + 1) + "/" + dpdata_Pagamento.getYear());
+        editData_Lancamento.setText(dpdata_Lancamento.getDayOfMonth() + "/" + (dpdata_Lancamento.getMonth() + 1) + "/" + dpdata_Lancamento.getYear());
 
         Calendar c = Calendar.getInstance();
         int dia = c.get(Calendar.YEAR);
@@ -72,9 +72,9 @@ public class LancamentoProducao extends AppCompatActivity implements View.OnClic
                 if (hasFocus) {
                     dpdata_Validade.setVisibility(View.VISIBLE);
 
-                }else{
+                } else {
                     dpdata_Validade.setVisibility(View.INVISIBLE);
-                    editData_Validade.setText(dpdata_Validade.getDayOfMonth()+"/"+ (dpdata_Validade.getMonth() + 1)+"/"+ dpdata_Validade.getYear());
+                    editData_Validade.setText(dpdata_Validade.getDayOfMonth() + "/" + (dpdata_Validade.getMonth() + 1) + "/" + dpdata_Validade.getYear());
                 }
 
             }
@@ -85,21 +85,22 @@ public class LancamentoProducao extends AppCompatActivity implements View.OnClic
                 if (hasFocus) {
                     dpdata_Pagamento.setVisibility(View.VISIBLE);
 
-                }else{
+                } else {
                     dpdata_Pagamento.setVisibility(View.INVISIBLE);
-                    editData_Pagamento.setText(dpdata_Pagamento.getDayOfMonth()+"/"+ (dpdata_Pagamento.getMonth() + 1)+"/"+ dpdata_Pagamento.getYear());
+                    editData_Pagamento.setText(dpdata_Pagamento.getDayOfMonth() + "/" + (dpdata_Pagamento.getMonth() + 1) + "/" + dpdata_Pagamento.getYear());
                 }
 
             }
-        });editData_Lancamento.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+        });
+        editData_Lancamento.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
             public void onFocusChange(View view, boolean hasFocus) {
                 if (hasFocus) {
                     dpdata_Lancamento.setVisibility(View.VISIBLE);
 
-                }else{
+                } else {
                     dpdata_Lancamento.setVisibility(View.INVISIBLE);
-                    editData_Lancamento.setText(dpdata_Lancamento.getDayOfMonth()+"/"+ (dpdata_Lancamento.getMonth() + 1)+"/"+ dpdata_Lancamento.getYear());
+                    editData_Lancamento.setText(dpdata_Lancamento.getDayOfMonth() + "/" + (dpdata_Lancamento.getMonth() + 1) + "/" + dpdata_Lancamento.getYear());
                 }
 
             }

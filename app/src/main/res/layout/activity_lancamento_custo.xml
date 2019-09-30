@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".LancamentoCusto"
     android:padding="25dp"
-    android:background="@drawable/bordalayout">
+    android:background="@drawable/bordalayout"
+    android:focusableInTouchMode="true">
 
     <TextView
         android:id="@+id/textLogo"
@@ -27,7 +28,7 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@android:color/white"
-        android:layout_below="@id/textLogo"/>
+        android:layout_below="@id/textLogo" />
 
     <TextView
         android:id="@+id/textNomeFazendaMES"
@@ -38,7 +39,7 @@
         android:textAlignment="center"
         android:layout_centerHorizontal="true"
         android:textSize="18sp"
-        android:layout_below="@id/viewLinha"/>
+        android:layout_below="@id/viewLinha" />
 
     <View
         android:id="@+id/viewLinha2"
@@ -46,7 +47,7 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@android:color/white"
-        android:layout_below="@id/textNomeFazendaMES"/>
+        android:layout_below="@id/textNomeFazendaMES" />
 
     <TextView
         android:id="@+id/textData_Lancamento"
@@ -56,7 +57,7 @@
         android:text="@string/data_lancamento"
         android:layout_alignParentLeft="true"
         android:textSize="16sp"
-        android:layout_below="@id/viewLinha2"/>
+        android:layout_below="@id/viewLinha2" />
 
     <EditText
         android:id="@+id/editData_Lancamento"
@@ -68,7 +69,7 @@
         android:gravity="center"
         android:padding="4dp"
         android:inputType="date"
-        android:background="@drawable/edit_text"/>
+        android:background="@drawable/edit_text" />
 
     <DatePicker
         android:id="@+id/DP_data_Lancamento"
@@ -79,8 +80,9 @@
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:layout_below="@+id/editData_Pagamento"
-        android:calendarViewShown = "false"
-        android:visibility="invisible"/>
+        android:calendarViewShown="false"
+        android:visibility="invisible"
+        />
 
     <TextView
         android:id="@+id/textValor"
@@ -90,7 +92,7 @@
         android:text="Valor do Produto"
         android:layout_alignStart="@id/editValor"
         android:textSize="16sp"
-        android:layout_below="@id/viewLinha2"/>
+        android:layout_below="@id/viewLinha2" />
 
     <EditText
         android:id="@+id/editValor"
@@ -102,7 +104,7 @@
         android:gravity="center"
         android:padding="4dp"
         android:inputType="numberDecimal"
-        android:background="@drawable/edit_text"/>
+        android:background="@drawable/edit_text" />
 
     <TextView
         android:id="@+id/textDocOriginal"
@@ -112,7 +114,7 @@
         android:text="@string/numero_da_nota"
         android:layout_alignParentLeft="true"
         android:textSize="18sp"
-        android:layout_below="@id/editData_Lancamento"/>
+        android:layout_below="@id/editData_Lancamento" />
 
     <EditText
         android:id="@+id/editNumberoNota"
@@ -124,7 +126,7 @@
         android:padding="4dp"
         android:inputType="number"
         android:hint="xxxxxxxx"
-        android:background="@drawable/edit_text"/>
+        android:background="@drawable/edit_text" />
 
     <TextView
         android:id="@+id/textFornecedor"
@@ -134,7 +136,7 @@
         android:text="Fornecedor"
         android:layout_alignParentLeft="true"
         android:textSize="18sp"
-        android:layout_below="@id/editNumberoNota"/>
+        android:layout_below="@id/editNumberoNota" />
 
     <EditText
         android:id="@+id/editFornecedor"
@@ -146,7 +148,7 @@
         android:hint="AGROTEC - Produtos Agropecuários"
         android:padding="4dp"
         android:inputType="text"
-        android:background="@drawable/edit_text"/>
+        android:background="@drawable/edit_text" />
 
     <TextView
         android:id="@+id/texttipo_produção_cultura"
@@ -156,7 +158,7 @@
         android:text="Tipo de produção /cultura"
         android:layout_alignParentLeft="true"
         android:textSize="18sp"
-        android:layout_below="@id/editFornecedor"/>
+        android:layout_below="@id/editFornecedor" />
 
     <Spinner
         android:id="@+id/list_itemTipoProducao"
@@ -164,7 +166,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/texttipo_produção_cultura"
         android:background="@android:drawable/btn_dropdown"
-        android:spinnerMode="dropdown"/>
+        android:spinnerMode="dropdown" />
 
     <TextView
         android:id="@+id/textDescricao_Produto"
@@ -174,7 +176,7 @@
         android:text="Descrição do produto"
         android:layout_alignParentLeft="true"
         android:textSize="18sp"
-        android:layout_below="@id/list_itemTipoProducao"/>
+        android:layout_below="@id/list_itemTipoProducao" />
 
     <EditText
         android:id="@+id/editDescricao_Produto"
@@ -186,7 +188,7 @@
         android:hint="Ração mineral suplementada"
         android:padding="4dp"
         android:inputType="text"
-        android:background="@drawable/edit_text"/>
+        android:background="@drawable/edit_text" />
 
     <TextView
         android:id="@+id/textData_Validade"
@@ -196,7 +198,7 @@
         android:text="Data de validade"
         android:layout_alignParentLeft="true"
         android:textSize="18sp"
-        android:layout_below="@id/editDescricao_Produto"/>
+        android:layout_below="@id/editDescricao_Produto" />
 
     <EditText
         android:id="@+id/editData_Validade"
@@ -208,7 +210,7 @@
         android:gravity="center"
         android:padding="4dp"
         android:inputType="date"
-        android:background="@drawable/edit_text"/>
+        android:background="@drawable/edit_text" />
 
     <TextView
         android:id="@+id/textData_Pagamento"
@@ -218,7 +220,7 @@
         android:text="Data de Pagamento"
         android:layout_alignParentRight="true"
         android:textSize="18sp"
-        android:layout_below="@id/editDescricao_Produto"/>
+        android:layout_below="@id/editDescricao_Produto" />
 
     <EditText
         android:id="@+id/editData_Pagamento"
@@ -230,7 +232,7 @@
         android:layout_alignParentRight="true"
         android:padding="4dp"
         android:inputType="date"
-        android:background="@drawable/edit_text"/>
+        android:background="@drawable/edit_text" />
 
     <DatePicker
         android:id="@+id/DP_data_Validade"
@@ -241,9 +243,9 @@
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:layout_below="@+id/editData_Pagamento"
-        android:calendarViewShown = "false"
-        android:visibility="invisible"/>
-    
+        android:calendarViewShown="false"
+        android:visibility="invisible" />
+
     <DatePicker
         android:id="@+id/DP_data_Pagamento"
         android:layout_width="wrap_content"
@@ -253,8 +255,8 @@
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:layout_below="@+id/editData_Pagamento"
-        android:calendarViewShown = "false"
-        android:visibility="invisible"/>
+        android:calendarViewShown="false"
+        android:visibility="invisible" />
 
     <Button
         android:id="@+id/bt_Limpar_Lancamento_Custo"
@@ -267,7 +269,7 @@
         android:layout_centerHorizontal="true"
         android:padding="10dp"
         android:layout_above="@+id/bt_Salvar_Lancamento_Custo"
-        android:background="@drawable/botao"/>
+        android:background="@drawable/botao" />
 
     <Button
         android:id="@+id/bt_Salvar_Lancamento_Custo"
@@ -279,6 +281,6 @@
         android:textColor="@drawable/cor_texto_botao"
         android:padding="10dp"
         android:layout_alignParentBottom="true"
-        android:background="@drawable/botao"/>
+        android:background="@drawable/botao" />
 
 </RelativeLayout>

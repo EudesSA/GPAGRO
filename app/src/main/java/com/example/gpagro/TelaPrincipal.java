@@ -43,19 +43,19 @@ public class TelaPrincipal extends AppCompatActivity implements View.OnClickList
             //Logica do Botão
             Intent intent = new Intent(this, LancamentoCusto.class);
             startActivity(intent);
-        }else if (id == R.id.bt_Tela_Lancamento_Producao) {
+        } else if (id == R.id.bt_Tela_Lancamento_Producao) {
             //Logica do Botão
             Intent intent = new Intent(this, LancamentoProducao.class);
             startActivity(intent);
-        }else if (id == R.id.bt_Tela_Custo_x_Producao) {
+        } else if (id == R.id.bt_Tela_Custo_x_Producao) {
             //Logica do Botão
             Intent intent = new Intent(this, CustoProducao.class);
             startActivity(intent);
-        }else if (id == R.id.bt_Tela_CustoTotal) {
+        } else if (id == R.id.bt_Tela_CustoTotal) {
             //Logica do Botão
             Intent intent = new Intent(this, CustoTotal.class);
             startActivity(intent);
-        }else if (id == R.id.bt_Tela_ProducaoTotal) {
+        } else if (id == R.id.bt_Tela_ProducaoTotal) {
             //Logica do Botão
             Intent intent = new Intent(this, ProducaoTotal.class);
             startActivity(intent);

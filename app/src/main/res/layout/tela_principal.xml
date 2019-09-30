@@ -27,14 +27,15 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@android:color/white"
-        android:layout_below="@id/textLogo"/>
+        android:layout_below="@id/textLogo" />
 
     <RelativeLayout
-            android:layout_below="@id/viewLinha"
-            android:layout_marginTop="2dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="5dp">
+        android:layout_below="@id/viewLinha"
+        android:layout_marginTop="2dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+
         <Button
             android:id="@+id/bt_Tela_lacamento_Custo"
             android:layout_marginTop="20dp"
@@ -45,7 +46,8 @@
             android:textColor="@drawable/cor_texto_botao"
             android:layout_centerHorizontal="true"
             android:padding="10dp"
-            android:background="@drawable/botao"/>
+            android:background="@drawable/botao" />
+
         <Button
             android:id="@+id/bt_Tela_Lancamento_Producao"
             android:layout_marginTop="30dp"
@@ -57,7 +59,8 @@
             android:text="@string/lancamento_de_producao"
             android:textColor="@drawable/cor_texto_botao"
             android:padding="10dp"
-            android:background="@drawable/botao"/>
+            android:background="@drawable/botao" />
+
         <Button
             android:id="@+id/bt_Tela_Custo_x_Producao"
             android:layout_marginTop="30dp"
@@ -69,7 +72,8 @@
             android:text="@string/custo_x_producao"
             android:textColor="@drawable/cor_texto_botao"
             android:padding="10dp"
-            android:background="@drawable/botao"/>
+            android:background="@drawable/botao" />
+
         <Button
             android:id="@+id/bt_Tela_CustoTotal"
             android:layout_marginTop="30dp"
@@ -82,7 +86,8 @@
             android:text="@string/custo_total"
             android:textColor="@drawable/cor_texto_botao"
             android:padding="10dp"
-            android:background="@drawable/botao"/>
+            android:background="@drawable/botao" />
+
         <Button
             android:id="@+id/bt_Tela_ProducaoTotal"
             android:layout_marginTop="30dp"
@@ -95,14 +100,15 @@
             android:text="@string/producao_total"
             android:textColor="@drawable/cor_texto_botao"
             android:padding="10dp"
-            android:background="@drawable/botao"/>
+            android:background="@drawable/botao" />
+
         <ImageView
             android:layout_below="@id/bt_Tela_ProducaoTotal"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/logo"/>
+            android:src="@drawable/logo" />
     </RelativeLayout>
 
 </RelativeLayout>

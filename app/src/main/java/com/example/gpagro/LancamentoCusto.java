@@ -31,7 +31,7 @@ public class LancamentoCusto extends AppCompatActivity implements View.OnClickLi
         Spinner dropdown = findViewById(R.id.list_itemTipoProducao);
 
         String[] items = new String[]{
-                " ","Pecuária - leite","Pecuária - gado de corte", "Plantação de hortaliças",
+                " ", "Pecuária - leite", "Pecuária - gado de corte", "Plantação de hortaliças",
                 "Suinocultura", "Piscicultura", "Caprinocultura"
         };
 
@@ -48,13 +48,14 @@ public class LancamentoCusto extends AppCompatActivity implements View.OnClickLi
         editData_Validade = findViewById(R.id.editData_Validade);
         editData_Pagamento = findViewById(R.id.editData_Pagamento);
         editData_Lancamento = findViewById(R.id.editData_Lancamento);
+
         dpdata_Validade = findViewById(R.id.DP_data_Validade);
         dpdata_Pagamento = findViewById(R.id.DP_data_Pagamento);
         dpdata_Lancamento = findViewById(R.id.DP_data_Lancamento);
 
-        editData_Validade.setText(dpdata_Validade.getDayOfMonth()+"/"+ (dpdata_Validade.getMonth() + 1)+"/"+ dpdata_Validade.getYear());
-        editData_Pagamento.setText(dpdata_Pagamento.getDayOfMonth()+"/"+ (dpdata_Pagamento.getMonth() + 1)+"/"+ dpdata_Pagamento.getYear());
-        editData_Lancamento.setText(dpdata_Lancamento.getDayOfMonth()+"/"+ (dpdata_Lancamento.getMonth() + 1)+"/"+ dpdata_Lancamento.getYear());
+        editData_Validade.setText(dpdata_Validade.getDayOfMonth() + "/" + (dpdata_Validade.getMonth() + 1) + "/" + dpdata_Validade.getYear());
+        editData_Pagamento.setText(dpdata_Pagamento.getDayOfMonth() + "/" + (dpdata_Pagamento.getMonth() + 1) + "/" + dpdata_Pagamento.getYear());
+        editData_Lancamento.setText(dpdata_Lancamento.getDayOfMonth() + "/" + (dpdata_Lancamento.getMonth() + 1) + "/" + dpdata_Lancamento.getYear());
 
         Calendar c = Calendar.getInstance();
         int dia = c.get(Calendar.YEAR);
@@ -72,9 +73,9 @@ public class LancamentoCusto extends AppCompatActivity implements View.OnClickLi
                 if (hasFocus) {
                     dpdata_Validade.setVisibility(View.VISIBLE);
 
-                }else{
+                } else {
                     dpdata_Validade.setVisibility(View.INVISIBLE);
-                    editData_Validade.setText(dpdata_Validade.getDayOfMonth()+"/"+ (dpdata_Validade.getMonth() + 1)+"/"+ dpdata_Validade.getYear());
+                    editData_Validade.setText(dpdata_Validade.getDayOfMonth() + "/" + (dpdata_Validade.getMonth() + 1) + "/" + dpdata_Validade.getYear());
                 }
 
             }
@@ -85,9 +86,9 @@ public class LancamentoCusto extends AppCompatActivity implements View.OnClickLi
                 if (hasFocus) {
                     dpdata_Pagamento.setVisibility(View.VISIBLE);
 
-                }else{
+                } else {
                     dpdata_Pagamento.setVisibility(View.INVISIBLE);
-                    editData_Pagamento.setText(dpdata_Pagamento.getDayOfMonth()+"/"+ (dpdata_Pagamento.getMonth() + 1)+"/"+ dpdata_Pagamento.getYear());
+                    editData_Pagamento.setText(dpdata_Pagamento.getDayOfMonth() + "/" + (dpdata_Pagamento.getMonth() + 1) + "/" + dpdata_Pagamento.getYear());
                 }
 
             }
@@ -98,9 +99,9 @@ public class LancamentoCusto extends AppCompatActivity implements View.OnClickLi
                 if (hasFocus) {
                     dpdata_Lancamento.setVisibility(View.VISIBLE);
 
-                }else{
+                } else {
                     dpdata_Lancamento.setVisibility(View.INVISIBLE);
-                    editData_Lancamento.setText(dpdata_Lancamento.getDayOfMonth()+"/"+ (dpdata_Lancamento.getMonth() + 1)+"/"+ dpdata_Lancamento.getYear());
+                    editData_Lancamento.setText(dpdata_Lancamento.getDayOfMonth() + "/" + (dpdata_Lancamento.getMonth() + 1) + "/" + dpdata_Lancamento.getYear());
                 }
 
             }
@@ -110,9 +111,12 @@ public class LancamentoCusto extends AppCompatActivity implements View.OnClickLi
 
     @Override
     public void onClick(View v) {
+         if (editData_Lancamento.isFocusable() == false) {
+            dpdata_Lancamento.setVisibility(View.INVISIBLE);
 
 
-    }
+            }
+       }
 
     private static class ViewHolder {
         Button buttonSalvar;
