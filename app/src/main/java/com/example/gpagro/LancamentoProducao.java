@@ -15,17 +15,17 @@ import java.util.Calendar;
 public class LancamentoProducao extends AppCompatActivity implements View.OnClickListener {
     private ViewHolder mViewHolder = new ViewHolder();
 
-    DatePicker dpdata_Validade;
-    DatePicker dpdata_Pagamento;
     DatePicker dpdata_Lancamento;
-    EditText editData_Validade;
-    EditText editData_Pagamento;
     EditText editData_Lancamento;
+    EditText edit_valorUnitario;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lancamento_producao);
+
+        edit_valorUnitario = findViewById(R.id.editValorUnitario);
+        edit_valorUnitario.requestFocus();
 
         Spinner dropdown = findViewById(R.id.list_itemTipoProducao);
 
@@ -39,21 +39,15 @@ public class LancamentoProducao extends AppCompatActivity implements View.OnClic
         dropdown.setAdapter(adapter);
 
 
-        this.mViewHolder.buttonSalvar = findViewById(R.id.bt_Salvar_Lancamento_Custo);
+        this.mViewHolder.buttonSalvar = findViewById(R.id.bt_Salvar_Lancamento_Producao);
         this.mViewHolder.buttonSalvar.setOnClickListener(this);
-        this.mViewHolder.buttonLimpar = findViewById(R.id.bt_Limpar_Lancamento_Custo);
+        this.mViewHolder.buttonLimpar = findViewById(R.id.bt_Limpar_Lancamento_Producao);
         this.mViewHolder.buttonLimpar.setOnClickListener(this);
 
+        editData_Lancamento = findViewById(R.id.editData_Lancamento_Producao);
 
-        editData_Validade = findViewById(R.id.editData_Validade);
-        editData_Pagamento = findViewById(R.id.editData_Pagamento);
-        editData_Lancamento = findViewById(R.id.editData_Pagamento);
-        dpdata_Validade = findViewById(R.id.DP_data_Validade);
-        dpdata_Pagamento = findViewById(R.id.DP_data_Pagamento);
-        dpdata_Lancamento = findViewById(R.id.DP_data_Lancamento);
+        dpdata_Lancamento = findViewById(R.id.DP_data_Lancamento_Producao);
 
-        editData_Validade.setText(dpdata_Validade.getDayOfMonth() + "/" + (dpdata_Validade.getMonth() + 1) + "/" + dpdata_Validade.getYear());
-        editData_Pagamento.setText(dpdata_Pagamento.getDayOfMonth() + "/" + (dpdata_Pagamento.getMonth() + 1) + "/" + dpdata_Pagamento.getYear());
         editData_Lancamento.setText(dpdata_Lancamento.getDayOfMonth() + "/" + (dpdata_Lancamento.getMonth() + 1) + "/" + dpdata_Lancamento.getYear());
 
         Calendar c = Calendar.getInstance();
@@ -62,36 +56,8 @@ public class LancamentoProducao extends AppCompatActivity implements View.OnClic
         int ano = c.get(Calendar.DAY_OF_MONTH);
 
         // set current date into datepicker
-        dpdata_Validade.init(dia, mes, ano, null);
-        dpdata_Pagamento.init(dia, mes, ano, null);
         dpdata_Lancamento.init(dia, mes, ano, null);
 
-        editData_Validade.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-            @Override
-            public void onFocusChange(View view, boolean hasFocus) {
-                if (hasFocus) {
-                    dpdata_Validade.setVisibility(View.VISIBLE);
-
-                } else {
-                    dpdata_Validade.setVisibility(View.INVISIBLE);
-                    editData_Validade.setText(dpdata_Validade.getDayOfMonth() + "/" + (dpdata_Validade.getMonth() + 1) + "/" + dpdata_Validade.getYear());
-                }
-
-            }
-        });
-        editData_Pagamento.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-            @Override
-            public void onFocusChange(View view, boolean hasFocus) {
-                if (hasFocus) {
-                    dpdata_Pagamento.setVisibility(View.VISIBLE);
-
-                } else {
-                    dpdata_Pagamento.setVisibility(View.INVISIBLE);
-                    editData_Pagamento.setText(dpdata_Pagamento.getDayOfMonth() + "/" + (dpdata_Pagamento.getMonth() + 1) + "/" + dpdata_Pagamento.getYear());
-                }
-
-            }
-        });
         editData_Lancamento.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
             public void onFocusChange(View view, boolean hasFocus) {

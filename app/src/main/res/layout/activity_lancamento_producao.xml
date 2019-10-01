@@ -59,7 +59,7 @@
         android:layout_below="@id/viewLinha2" />
 
     <EditText
-        android:id="@+id/editData_Lancamento"
+        android:id="@+id/editData_Lancamento_Producao"
         android:layout_width="150dp"
         android:layout_height="35dp"
         android:layout_below="@+id/textData_Lancamento"
@@ -71,14 +71,34 @@
         android:hint="DD/MM/AAAA"
         android:background="@drawable/edit_text" />
 
+    <TextView
+        android:id="@+id/texttipo_produção_cultura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Tipo de produção /cultura"
+        android:layout_alignParentLeft="true"
+        android:textSize="16sp"
+        android:layout_below="@id/editData_Lancamento_Producao" />
+
+    <Spinner
+        android:id="@+id/list_itemTipoProducao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/texttipo_produção_cultura"
+        android:background="@android:drawable/btn_dropdown"
+        android:spinnerMode="dropdown" />
+
     <DatePicker
-        android:id="@+id/DP_data_Lancamento"
+        android:id="@+id/DP_data_Lancamento_Producao"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:datePickerMode="spinner"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:calendarViewShown="false"
+        android:elevation="20dp"
+        android:background="@color/beige"
         android:visibility="invisible" />
 
     <TextView
@@ -88,8 +108,8 @@
         android:layout_marginTop="10dp"
         android:text="Valor Unitário / Produto / Serviço"
         android:layout_alignParentLeft="true"
-        android:textSize="18sp"
-        android:layout_below="@id/editData_Lancamento" />
+        android:textSize="16sp"
+        android:layout_below="@id/list_itemTipoProducao" />
 
     <EditText
         android:id="@+id/editValorUnitario"
@@ -109,7 +129,7 @@
         android:layout_marginTop="10dp"
         android:text="Quantidade de Produção"
         android:layout_alignParentLeft="true"
-        android:textSize="18sp"
+        android:textSize="16sp"
         android:layout_below="@id/editValorUnitario" />
 
     <EditText
@@ -122,6 +142,40 @@
         android:padding="4dp"
         android:inputType="numberDecimal"
         android:background="@drawable/edit_text" />
+
+    <TextView
+        android:id="@+id/textUnidadeMedida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editValorUnitario"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="218dp"
+        android:layout_marginTop="10dp"
+        android:text="Unidade de medida"
+        android:textSize="16sp" />
+
+
+    <RadioButton
+        android:id="@+id/radio_Litros"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textUnidadeMedida"
+        android:layout_marginLeft="21dp"
+        android:layout_marginTop="7dp"
+        android:layout_toRightOf="@id/editQuantidadeProducao"
+        android:text="kg"
+        android:textSize="12sp" />
+
+    <RadioButton
+        android:id="@+id/radio_Kilos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radio_Litros"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="-31dp"
+        android:layout_toRightOf="@id/radio_Litros"
+        android:text="L"
+        android:textSize="12sp" />
 
     <TextView
         android:id="@+id/textValorTotal"
@@ -143,60 +197,8 @@
         android:inputType="numberDecimal"
         android:background="@drawable/edit_text" />
 
-    <TextView
-        android:id="@+id/texttipo_produção_cultura"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="Tipo de produção /cultura"
-        android:layout_alignParentLeft="true"
-        android:textSize="18sp"
-        android:layout_below="@id/editValorTotal" />
-
-    <Spinner
-        android:id="@+id/list_itemTipoProducao"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/texttipo_produção_cultura"
-        android:background="@android:drawable/btn_dropdown"
-        android:spinnerMode="dropdown" />
-
-    <TextView
-        android:id="@+id/textUnidadeMedida"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/list_itemTipoProducao"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="218dp"
-        android:layout_marginTop="-206dp"
-        android:text="Quantidade de Produção"
-        android:textSize="18sp" />
-
-
-    <RadioButton
-        android:id="@+id/radio_Litros"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textUnidadeMedida"
-        android:layout_marginLeft="21dp"
-        android:layout_marginTop="7dp"
-        android:layout_toRightOf="@id/editQuantidadeProducao"
-        android:text="kg"
-        android:textSize="12sp" />
-
-    <RadioButton
-        android:id="@+id/radio_Kilos"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/radio_Litros"
-        android:layout_marginLeft="108dp"
-        android:layout_marginTop="-31dp"
-        android:layout_toRightOf="@id/editQuantidadeProducao"
-        android:text="m"
-        android:textSize="12sp" />
-
     <Button
-        android:id="@+id/bt_Limpar_Lancamento_Custo"
+        android:id="@+id/bt_Limpar_Lancamento_Producao"
         android:layout_marginTop="8dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -205,11 +207,11 @@
         android:textColor="@drawable/cor_texto_botao"
         android:layout_centerHorizontal="true"
         android:padding="10dp"
-        android:layout_above="@+id/bt_Salvar_Lancamento_Custo"
+        android:layout_above="@+id/bt_Salvar_Lancamento_Producao"
         android:background="@drawable/botao" />
 
     <Button
-        android:id="@+id/bt_Salvar_Lancamento_Custo"
+        android:id="@+id/bt_Salvar_Lancamento_Producao"
         android:layout_marginTop="8dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
