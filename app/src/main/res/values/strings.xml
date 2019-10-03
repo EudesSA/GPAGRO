@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">GPAGRO</string>
-    <string name="producao_total">Produção Total</string>
-    <string name="custo_total">Custo Total</string>
-    <string name="custo_x_producao">Custo x Produção</string>
+    <string name="producao_total">Relatório Produção Total</string>
+    <string name="custo_total">Relatório Custo Total</string>
+    <string name="custo_x_producao">Relatório Custo x Produção</string>
     <string name="lancamento_de_producao">Lançamento de Produção</string>
     <string name="lancamento_de_custo">Lançamento de Custo</string>
     <string name="nome_APP_Tela_Principal">Gestão de Custo Rural</string>
