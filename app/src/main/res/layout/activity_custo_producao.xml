@@ -152,6 +152,7 @@
                 android:layout_marginTop="10dp"
                 android:gravity="center"
                 android:text="Custo total"
+                android:textStyle="bold"
                 android:textAllCaps="true"
                 android:textSize="20sp"
                 android:layout_below="@id/viewLinha3" />
@@ -178,6 +179,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:text="Produção total"
+                android:textStyle="bold"
                 android:gravity="center"
                 android:textAllCaps="true"
                 android:textSize="20sp"
@@ -206,6 +208,7 @@
                 android:layout_marginTop="10dp"
                 android:text="Valor Liquido"
                 android:gravity="center"
+                android:textStyle="bold"
                 android:textAllCaps="true"
                 android:textSize="20sp"
                 android:layout_below="@id/editValorProducaoTotal" />
