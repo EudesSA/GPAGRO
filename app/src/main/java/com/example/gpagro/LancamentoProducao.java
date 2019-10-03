@@ -8,6 +8,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.Spinner;
 
 import java.util.Calendar;
@@ -18,6 +19,8 @@ public class LancamentoProducao extends AppCompatActivity implements View.OnClic
     DatePicker dpdata_Lancamento;
     EditText editData_Lancamento;
     EditText edit_valorUnitario;
+    RadioButton radioButtonLitros;
+    RadioButton radioButtonKilos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +48,8 @@ public class LancamentoProducao extends AppCompatActivity implements View.OnClic
         this.mViewHolder.buttonLimpar.setOnClickListener(this);
 
         editData_Lancamento = findViewById(R.id.editData_Lancamento_Producao);
+        radioButtonKilos = findViewById(R.id.radio_Kilos);
+        radioButtonLitros = findViewById(R.id.radio_Litros);
 
         dpdata_Lancamento = findViewById(R.id.DP_data_Lancamento_Producao);
 
@@ -68,7 +73,6 @@ public class LancamentoProducao extends AppCompatActivity implements View.OnClic
                     dpdata_Lancamento.setVisibility(View.INVISIBLE);
                     editData_Lancamento.setText(dpdata_Lancamento.getDayOfMonth() + "/" + (dpdata_Lancamento.getMonth() + 1) + "/" + dpdata_Lancamento.getYear());
                 }
-
             }
         });
 
@@ -77,6 +81,10 @@ public class LancamentoProducao extends AppCompatActivity implements View.OnClic
     @Override
     public void onClick(View v) {
 
+
+    }
+
+    public void verificaRadiusButton(){
 
     }
 
